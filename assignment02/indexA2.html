@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ASSIGNMENT 02</title>
+	<link rel="stylesheet" href="styleA2.css">
+	<script src="p5.minA2.js"></script>
+</head>
+
+<body>
+	<div style="text-align:center">
+		<h2 id="title">INTERACTIVE SLIDESHOW</h2>
+		<p>Slide through images to play music!
+		<br><b>WARNING:</b> Adjust your volume!!!</p>
+	</div>
+
+	<!-- changing thumbnails into 2x2 grid -->
+	<div class="grid-2x2">
+		<div class="column">
+			<img src="/assignment02/photosA2/denjicsm.jpg" style="width:100%" onclick="openModal();currentSlide(1)"
+				class="thumbnail cursor">
+		</div>
+		<div class="column">
+			<img src="/assignment02/photosA2/invincible.jpg" style="width:100%" onclick="openModal();currentSlide(2)"
+				class="thumbnail cursor">
+		</div>
+		<div class="column">
+			<img src="/assignment02/photosA2/mando.jpg" style="width:100%" onclick="openModal();currentSlide(3)"
+				class="thumbnail cursor">
+		</div>
+		<div class="column">
+			<img src="/assignment02/photosA2/spiderverse.jpg" style="width:100%" onclick="openModal();currentSlide(4)"
+				class="thumbnail cursor">
+		</div>
+	</div>
+
+	<!-- volume slider + text fromating -->
+	<div id="slider-container" style="display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 20px;">
+		<p style="font-weight: bold; font-size: 18px; margin: 0;">Volume🔊</p>
+	</div>
+
+	<div id="myModal" class="modal">
+		<span class="close cursor" onclick="closeModal()">&times;</span>
+		<div class="modal-content">
+			<div class="mySlides">
+				<div class="numbertext">01 - Chainsaw Man⛓️‍💥</div>
+				<img src="/assignment02/photosA2/denjicsm.jpg" style="width:100%">
+			</div>
+			<div class="mySlides">
+				<div class="numbertext">02 - Invincible💪</div>
+				<img src="/assignment02/photosA2/invincible.jpg" style="width:100%">
+			</div>
+			<div class="mySlides">
+				<div class="numbertext">03 - The Mandalorian👽</div>
+				<img src="/assignment02/photosA2/mando.jpg" style="width:100%">
+			</div>
+			<div class="mySlides">
+				<div class="numbertext">04 - Spider-Man: Into the Spider-Verse🕷️</div>
+				<img src="/assignment02/photosA2/spiderverse.jpg" style="width:100%">
+			</div>
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			<div class="caption-container">
+				<p id="caption"></p>
+			</div>
+			
+			<div class="column">
+				<img class="demo" src="/assignment02/photosA2/denjicsm.jpg" style="width:100%" onclick="currentSlide(1)"
+					alt="Kenshi Yonezu - KICK BACK">
+			</div>
+			<div class="column">
+				<img class="demo" src="/assignment02/photosA2/invincible.jpg" style="width:100%" onclick="currentSlide(2)"
+					alt="d4vd - Feel It">
+			</div>
+			<div class="column">
+				<img class="demo" src="/assignment02/photosA2/mando.jpg" style="width:100%" onclick="currentSlide(3)"
+					alt="Ludwig Göransson - The Mandalorian">
+			</div>
+			<div class="column">
+				<img class="demo" src="/assignment02/photosA2/spiderverse.jpg" style="width:100%" onclick="currentSlide(4)"
+					alt="Metro Boomin, A$AP Rocky, Roisee - Am I Dreaming">
+			</div>
+		</div>
+	</div>
+
+	<!-- loading audio files in html for callback within js -->
+	<audio id="song01" src="/assignment02/musicA2/denjicsm.mp3"></audio>
+	<audio id="song02" src="/assignment02/musicA2/invincible.mp3"></audio>
+	<audio id="song03" src="/assignment02/musicA2/mandalorian.mp3"></audio>
+	<audio id="song04" src="/assignment02/musicA2/spiderverse.mp3"></audio>
+
+	<script src="sketchA2.js"></script>
+</body>
+</html>

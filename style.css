@@ -1,4 +1,9 @@
-* {
-    border: 0px;
-    margin: 0px;
-}
+/* You can put this in a <style> block or separate style.css file */
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: rgb(253, 90, 0);
+    color: white;
+    padding: 10px;
+  }
+  
