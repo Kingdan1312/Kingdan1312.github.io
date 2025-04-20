@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ASSIGNMENT 03</title>
+    <link rel="stylesheet" href="styleA3.css">
+    <script src="p5.minA3.js"></script>
+</head>
+
+<body>
+    <!-- Container for scaling all components. -->
+    <div class="container">
+        <h1 class="title">TYPING GAME</h1>
+        <div>
+            <div id="level-text" class="level-text">LEVEL 01</div>
+            <div id="sentence-text" class="sentence-text">The quick brown fox.</div>
+        </div>
+
+       <!-- Type input box, game win/lose messages, and instruction box. -->
+        <div class="box-wrapper">
+            <div id="input-holder"></div>
+            <div id="message" class="message"></div>
+            <div class="instructions">
+                <h2>INSTRUCTIONS 🤖:</h2>
+                <ul>
+                    <li>Type each sentence exactly as shown above.</li>
+                    <li>Move onto the next level by making zero mistakes.</li>
+                    <li>If errors are made you must start from the beginning.</li>
+                    <li>Press <button id="restart-btn"><b>ENTER</b></button> at any time to restart the game.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="sketchA3.js"></script>
+</body>
+</html>
