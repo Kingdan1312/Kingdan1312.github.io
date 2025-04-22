@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ASSIGNMENT 04</title>
+    <script src="/assignment04/p5.minA4.js"></script>
+    <link rel="stylesheet" href="/assignment04/styleA4.css">
+</head>
+<body>
+    <!-- Container for all control components. -->
+    <div id="controls">
+        <h1 class="title">IT'S<br>RAINING!</h1>
+        <!-- Control buttons. -->
+        <div class="button-group">
+            <button id="rainButton" class="control-button">Start Rain</button>
+            <button id="thunderButton" class="control-button">Lightning</button>
+        </div>
+        <!-- Rain intensity slider. -->
+        <div id="slider-container">
+            <p id="intensityLabel" class="slider-label">Intensity💧</p>
+        </div>
+        <!-- Adjust volume slider. -->
+        <div id="volume-container">
+            <p id="volumeLabel" class="slider-label">Volume🔊</p>
+        </div>
+    </div>
+    <audio id="rainAudio" src="/assignment04/soundsA4/rain.mp3" loop></audio>
+    <audio id="lightningAudio" src="/assignment04/soundsA4/lightning.mp3"></audio>
+    <script src="/assignment04/sketchA4.js"></script>
+</body>
+</html>
+
+<!-- Audio files:
+https://www.youtube.com/watch?v=ki4a4d7wJRQ 
+https://www.youtube.com/watch?v=77jgQCkgObI  -->

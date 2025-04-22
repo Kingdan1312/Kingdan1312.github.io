@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Helvetica, sans-serif;
+    color: rgb(185, 207, 217);
+}
+
+.title{
+    font-size: 69px;
+    margin-bottom: 9px;
+    text-shadow: 1px 1px 9px rgba(255, 255, 255, 0.4);
+    opacity: 0.8;
+}
+
+/* Controls positioning. */
+#controls{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -54%);
+    text-align: center;
+}
+
+/* Button posistioning. */
+.button-group{
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    padding-top: 5px;
+}
+
+/* ==================== BUTTON styling. =========================*/
+.control-button{
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    background: transparent;
+    border: 3px solid rgb(71, 88, 152);
+    border-radius: 100px;
+    padding: 4px 35px;
+    transition: background 0.3s;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+.control-button:hover{
+    background: rgb(71, 88, 152);
+    opacity: 0.9;
+    box-shadow: 0 0 20px rgb(223, 142, 255);
+}
+
+/* ============= SLIDER styling/positioning. ===============*/
+#slider-container,
+#volume-container{
+    display: flex;
+    opacity: 0.9;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 8px;
+    /* margin-top: 16px;
+    padding-top: 10px; */
+}
+
+/* Slider text. */
+.slider-label{
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+}
