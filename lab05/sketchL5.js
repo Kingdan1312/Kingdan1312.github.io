@@ -3,7 +3,7 @@ var btn, loadText, sentence = '';
 function preload(){
     // Random phrase generator for JSON file:
     // https://www.thewordfinder.com/random-sentence-generator/ 
-    loadText = loadJSON("dataL5.json");
+    loadText = loadJSON("/lab05/dataL5.json");
 }
 
 function setup(){
