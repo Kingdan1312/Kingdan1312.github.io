@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ASSIGNMENT 05</title>
+    <link rel="stylesheet" href="/assignment05/styleA5.css">
+    <script src="/assignment05/p5.minA5.js"></script>
+
+    <!-- Preloading background images to prevent bugs.
+    Solved issue where background would disapear when switching categories. -->
+    <link rel="preload" href="/assignment05/imagesA5/nycpic.jpg" as="image">
+    <link rel="preload" href="/assignment05/imagesA5/forestpic.jpg" as="image">
+    <link rel="preload" href="/assignment05/imagesA5/beachpic.jpg" as="image">
+</head>
+<body>
+      <div id="controls">
+        <h1 class="title">IMMERSIVE<br>SOUNDSCAPE</h1>
+
+        <!-- Sound category buttons. -->
+        <div class="button-group">
+            <button class="category-button" id="forest-btn" onclick="loadCategory('forest')">Forest</button>
+            <button class="category-button" id="nyc-btn" onclick="loadCategory('newyork')">New York</button>
+            <button class="category-button" id="hawaii-btn" onclick="loadCategory('hawaii')">Hawaii</button>
+        </div>
+
+        <!-- Sound tiles per category. -->
+        <div id="sound-grid">
+            <div id="newyork-sounds" class="sound-group">
+                <button class="control-button" id="city-btn">CITY</button>
+                <button class="control-button" id="music-btn">MUSIC</button>
+                <button class="control-button" id="rain2-btn">RAIN</button>
+                <button class="control-button" id="subway-btn">SUBWAY</button>
+                <button class="control-button" id="whiteN-btn">AMBIENCE</button>
+                <button class="control-button" id="Wind-btn">WIND</button>
+            </div>
+            <div id="forest-sounds" class="sound-group" style="display:none">
+                <button class="control-button" id="fire-btn">FIRE</button>
+                <button class="control-button" id="hike-btn">HIKING</button>
+                <button class="control-button" id="river-btn">RIVER</button>
+                <button class="control-button" id="owl-btn">OWLS</button>
+                <button class="control-button" id="crickets-btn">CRICKETS</button>
+                <button class="control-button" id="birds-btn">BIRDS</button>
+            </div>
+            <div id="hawaii-sounds" class="sound-group" style="display:none">
+                <button class="control-button" id="palm-btn">TREES</button>
+                <button class="control-button" id="birds2-btn">BIRDS</button>
+                <button class="control-button" id="breeze-btn">BREEZE</button>
+                <button class="control-button" id="dolphin-btn">DOLPHINS</button>
+                <button class="control-button" id="music2-btn">MUSIC</button>
+                <button class="control-button" id="waves-btn">WAVES</button>
+            </div>
+        </div>
+        <!-- Global volume slider -->
+        <div id="volume-control">
+            <label for="volume-slider"><b>Volume🔊</b></label>
+        </div>
+    </div>
+
+    <!-- New York audios. -->
+    <audio src="/assignment05/soundsA5/city.mp3" id="city" loop></audio>
+    <audio src="/assignment05/soundsA5/music.mp3" id="music" loop></audio>
+    <audio src="/assignment05/soundsA5/rain2.mp3" id="rain2" loop></audio>
+    <audio src="/assignment05/soundsA5/subway.mp3" id="subway" loop></audio>
+    <audio src="/assignment05/soundsA5/whiteN.mp3" id="whiteN" loop></audio>
+    <audio src="/assignment05/soundsA5/Wind.mp3" id="Wind" loop></audio>
+
+    <!-- Forest audios. -->
+    <audio src="/assignment05/soundsA5/fire.mp3" id="fire" loop></audio>
+    <audio src="/assignment05/soundsA5/hike.mp3" id="hike" loop></audio>
+    <audio src="/assignment05/soundsA5/river.mp3" id="river" loop></audio>
+    <audio src="/assignment05/soundsA5/owl.mp3" id="owl" loop></audio>
+    <audio src="/assignment05/soundsA5/crickets.mp3" id="crickets" loop></audio>
+    <audio src="/assignment05/soundsA5/birds.mp3" id="birds" loop></audio>
+
+    <!-- Hawaii Audios. -->
+    <audio src="/assignment05/soundsA5/palm.mp3" id="palm" loop></audio>
+    <audio src="/assignment05/soundsA5/birds2.mp3" id="birds2" loop></audio>
+    <audio src="/assignment05/soundsA5/breeze.mp3" id="breeze" loop></audio>
+    <audio src="/assignment05/soundsA5/dolphin.mp3" id="dolphin" loop></audio>
+    <audio src="/assignment05/soundsA5/music2.mp3" id="music2" loop></audio>
+    <audio src="/assignment05/soundsA5/waves.mp3" id="waves" loop></audio>
+    
+    <script src="/assignment05/sketchA5.js"></script>
+</body>
+</html>
+
+
+
+<!-- YOUTUBE AUDIOS AND BACKGROUND IMAGE SOURCES: 
+ 
+- BEACH - 
+Bg Image:
+https://www.freepik.com/free-photo/beautiful-paradise-island-with-beach-sea_3531645.htm#fromView=search&page=1&position=42&uuid=065c6e58-040c-463e-9d04-18b95a194cca&query=beach 
+Hawaii music:
+https://www.youtube.com/watch?v=g1Y7MF9i2Hc 
+Bird sounds:
+https://www.youtube.com/watch?v=eA7wmasle6I 
+Waves:
+https://www.youtube.com/watch?v=OpPvOCx4Vf0 
+Ocean breeze:
+https://www.youtube.com/watch?v=wqGr4-T3rKo 
+Palm leaves
+https://www.youtube.com/watch?v=0gWl0pGgO3U 
+Dolphins:
+https://www.youtube.com/watch?v=a41TZAPyiow 
+
+
+ - FOREST -
+Bg Image:
+https://www.freepik.com/free-photo/trees-each-other-forest-covered-by-creeping-mist_10400025.htm#fromView=search&page=1&position=10&uuid=ca71c7c3-cb7a-4d3a-97b4-940d51bbe7df&query=foggy+forest 
+Crickets:
+https://www.youtube.com/watch?v=EpDY6PNZfic&t=138s 
+Birds:
+https://www.youtube.com/watch?v=DqewBvd-bAA&t=16s 
+Owls:
+https://www.youtube.com/watch?v=qBwENBlwSy8 
+River:
+https://www.youtube.com/watch?v=T8u8kNYHnoM 
+Hiking:
+https://www.youtube.com/watch?v=-dUhzZayxiQ 
+Fire:
+https://www.youtube.com/watch?v=eqO1H3bxvQk 
+
+
+ - NEW YORK - 
+Bg Image:
+https://wallpapercat.com/new-york-city-wallpapers#load 
+Street Ambience:
+https://www.youtube.com/watch?v=2EU8selmxg0 
+Calming music:
+https://www.youtube.com/watch?v=6me17gGZYRg 
+Rain sounds
+https://www.youtube.com/watch?v=Cl1dyPcZo6s 
+Subway sounds:
+https://www.youtube.com/watch?v=D3K5bt8NbN0 
+White noise:
+https://www.youtube.com/watch?v=XpLrup719fs&t=9s 
+Wind Noise:
+https://www.youtube.com/watch?v=ZM0Be5OjN70&t=579s 
+New music:
+https://www.youtube.com/watch?v=Pgevh-UvQ5g 
+
+-->
